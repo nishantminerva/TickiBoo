@@ -128,6 +128,8 @@ struct FooterView: View {
                     .background(Color(.purple))
                     .cornerRadius(15)
             })
+        .shadow(color: Color.white.opacity(0.15), radius: 5, x: 5, y:5)
+        .shadow(color: Color.white.opacity(0.15), radius: -5, x: 5, y:-5)
     }
 }
 
