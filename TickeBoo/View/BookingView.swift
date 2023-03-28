@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BookingView: View {
+    @State var bookedSeats: [Int] = [1,10,25,30,45,59,60]
+    @State var selectedSeats: [Int] = []
     var body: some View {
         
         ScrollView(.vertical, showsIndicators: false, content: {
@@ -60,11 +62,24 @@ struct BookingView: View {
                     ForEach(leftSide,id: \.self){ index in
 //                        Getting Correct Seats...
                         let seat = index >= 29 ? index - 1: index
-                        SeatView(index: index)
+//                        SeatView(index: index)
+                        SeatView(index: index, seat: seat, selectedSeats: $selectedSeats, bookedSeats: $bookedSeats)
                             .contentShape(Rectangle())
                             .onTapGesture{
-                                print(seat)
+//                                print(seat)
+                                if selectedSeats.contains(seat) {
+//                                    removing
+                                    selectedSeats.removeAll{
+                                        (removeSeat) -> Bool in
+                                        return removeSeat == seat
+                                    }
+                                    return
+                                }
+//                                adding
+                                selectedSeats.append(seat)
                             }
+                        //        disable if seat is booked
+                                .disabled(bookedSeats.contains(seat))
                     }
                 })
                 
@@ -72,11 +87,25 @@ struct BookingView: View {
                     
                     ForEach(rightSide,id: \.self){ index in
                         let seat = index >= 35 ? index - 2: index - 1
-                        SeatView(index: index)
+//                        SeatView(index: index)
+                        SeatView(index: index, seat: seat, selectedSeats: $selectedSeats, bookedSeats: $bookedSeats)
                             .contentShape(Rectangle())
                             .onTapGesture{
-                                print(seat)
+//                                print(seat)
+//                                checking and adding
+                                if selectedSeats.contains(seat) {
+//                                    removing
+                                    selectedSeats.removeAll{
+                                        (removeSeat) -> Bool in
+                                        return removeSeat == seat
+                                    }
+                                    return
+                                }
+//                                adding
+                                selectedSeats.append(seat)
                             }
+                        //        disable if seat is booked
+                                .disabled(bookedSeats.contains(seat))
                     }
                 })
 
@@ -91,16 +120,32 @@ struct BookingView: View {
 
 struct SeatView: View {
     var index: Int
+    var seat: Int
+    
+    @Binding var selectedSeats: [Int]
+    @Binding var bookedSeats: [Int]
+    
     var body: some View{
         ZStack{
             
             RoundedRectangle(cornerRadius: 6)
 //                .stroke(Color("button"))
-                .stroke(Color(.purple),lineWidth: 2)
+//                .stroke(Color(.purple),lineWidth: 2)
+                .stroke(bookedSeats.contains(seat) ? Color.gray : Color(.purple),lineWidth: 2)
                 .frame(height: 30)
+                .background(
+                    selectedSeats.contains(seat) ? Color(.purple) : Color.clear
+                )
 //            Hiding Those Four Seats...
                 .opacity(index == 0 || index == 28 || index == 35 || index == 61 ? 0 : 1)
+            
+            if bookedSeats.contains(seat) {
+                Image(systemName: "xmark")
+                    .foregroundColor(.gray)
+            }
         }
+////        disable if seat is booked
+//        .disabled(bookedSeats.contains(seat))
     }
 }
 
