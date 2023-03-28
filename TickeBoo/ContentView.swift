@@ -17,7 +17,11 @@ struct ContentView: View {
         //        }
         //        .padding()
         
-        BookingView()
+//        BookingView()
+        NavigationView{
+            Home()
+                .navigationBarHidden(true)
+        }
     }
 }
 

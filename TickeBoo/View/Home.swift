@@ -118,7 +118,8 @@ struct Home_Previews: PreviewProvider {
 struct FooterView: View {
     var body: some View{
         NavigationLink(
-            destination: Text("Destination"), label: {
+//            destination: Text("Destination"), label: {
+            destination: BookingView(), label: {
                 Text("Buy Tickets")
                     .fontWeight(.bold)
                     .foregroundColor(.white)
