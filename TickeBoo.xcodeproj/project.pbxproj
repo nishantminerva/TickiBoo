@@ -12,6 +12,7 @@
 		19D99B4129D30A0900F5414A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19D99B4029D30A0900F5414A /* Assets.xcassets */; };
 		19D99B4429D30A0900F5414A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19D99B4329D30A0900F5414A /* Preview Assets.xcassets */; };
 		19D99B4C29D30AEE00F5414A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D99B4B29D30AEE00F5414A /* Home.swift */; };
+		19D99B4F29D3235200F5414A /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D99B4E29D3235200F5414A /* MovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		19D99B4029D30A0900F5414A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19D99B4329D30A0900F5414A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		19D99B4B29D30AEE00F5414A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		19D99B4E29D3235200F5414A /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				19D99B3C29D30A0700F5414A /* TickeBooApp.swift */,
+				19D99B4D29D322EE00F5414A /* Model */,
 				19D99B4A29D30A3A00F5414A /* View */,
 				19D99B3E29D30A0700F5414A /* ContentView.swift */,
 				19D99B4029D30A0900F5414A /* Assets.xcassets */,
@@ -76,6 +79,14 @@
 				19D99B4B29D30AEE00F5414A /* Home.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		19D99B4D29D322EE00F5414A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19D99B4E29D3235200F5414A /* MovieModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19D99B4F29D3235200F5414A /* MovieModel.swift in Sources */,
 				19D99B3F29D30A0700F5414A /* ContentView.swift in Sources */,
 				19D99B4C29D30AEE00F5414A /* Home.swift in Sources */,
 				19D99B3D29D30A0700F5414A /* TickeBooApp.swift in Sources */,
