@@ -11,6 +11,7 @@
 		19D99B3F29D30A0700F5414A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D99B3E29D30A0700F5414A /* ContentView.swift */; };
 		19D99B4129D30A0900F5414A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19D99B4029D30A0900F5414A /* Assets.xcassets */; };
 		19D99B4429D30A0900F5414A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19D99B4329D30A0900F5414A /* Preview Assets.xcassets */; };
+		19D99B4C29D30AEE00F5414A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D99B4B29D30AEE00F5414A /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		19D99B3E29D30A0700F5414A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		19D99B4029D30A0900F5414A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19D99B4329D30A0900F5414A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		19D99B4B29D30AEE00F5414A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				19D99B3C29D30A0700F5414A /* TickeBooApp.swift */,
+				19D99B4A29D30A3A00F5414A /* View */,
 				19D99B3E29D30A0700F5414A /* ContentView.swift */,
 				19D99B4029D30A0900F5414A /* Assets.xcassets */,
 				19D99B4229D30A0900F5414A /* Preview Content */,
@@ -65,6 +68,14 @@
 				19D99B4329D30A0900F5414A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		19D99B4A29D30A3A00F5414A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				19D99B4B29D30AEE00F5414A /* Home.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19D99B3F29D30A0700F5414A /* ContentView.swift in Sources */,
+				19D99B4C29D30AEE00F5414A /* Home.swift in Sources */,
 				19D99B3D29D30A0700F5414A /* TickeBooApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
